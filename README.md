@@ -158,6 +158,10 @@ Detalle completo en [`04_Documentacion/Conclusiones_Recomendaciones.md`](04_Docu
 * **Estabilidad:** 2015-2024 se mantiene en una banda de $40-43 mil millones anuales; 2014 y 2025 son años parciales.
 * **Pagos:** 60 % con tarjeta; 4,8 % de facturas sin método de pago registrado.
 
+## Licencia
+
+El código, el modelo y la documentación se distribuyen bajo licencia [MIT](LICENSE). El dataset incluido es sintético y se publica con fines educativos.
+
 ## Autor
 
 **Cristian Atrio** · Proyecto Integrador — Módulo 3
