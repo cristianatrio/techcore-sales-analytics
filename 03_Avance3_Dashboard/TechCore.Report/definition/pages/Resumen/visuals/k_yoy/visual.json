@@ -65,11 +65,7 @@
                   "Value": "24D"
                 }
               }
-            }
-          }
-        },
-        {
-          "properties": {
+            },
             "color": {
               "solid": {
                 "color": {
@@ -86,15 +82,6 @@
                 }
               }
             }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
           }
         }
       ]

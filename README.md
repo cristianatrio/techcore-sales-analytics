@@ -11,6 +11,8 @@ Power Query · Python · Modelo en estrella · DAX · Power BI (PBIP) · RLS
 ![Modelo](https://img.shields.io/badge/modelo-estrella-22D3EE)
 ![RLS](https://img.shields.io/badge/RLS-3_roles-A78BFA)
 
+<img src="assets/dashboard_resumen.png" alt="Dashboard TechCore: página Resumen" width="900">
+
 </div>
 
 ---
@@ -36,7 +38,7 @@ flowchart LR
     A --> C[Avance 2<br/>Python · pandas<br/>limpieza + estrella]
     C --> D[modeloVentas.xlsx<br/>7 tablas]
     D --> E[Avance 3<br/>Modelo semántico TMDL<br/>+ medidas DAX + RLS]
-    E --> F[Dashboard<br/>PBIR · 3 páginas]
+    E --> F[Dashboard<br/>PBIR · 3 páginas + ficha + tooltip]
 ```
 
 ## Modelo en estrella
@@ -82,6 +84,18 @@ Tema oscuro propio (`techcore.json`), navegación con botones y tres páginas de
 | **Ficha de sucursal** *(oculta, drillthrough)* | KPIs, ventas por año y por marca, top 5 vendedores y medios de pago de una sucursal |
 | **Tooltip** *(oculta)* | Mini-resumen que aparece al pasar el mouse por el mapa y los gráficos |
 
+### Capturas
+
+<p align="center">
+  <img src="assets/dashboard_productos.png" alt="Dashboard TechCore: página Productos" width="860"><br>
+  <sub>Productos: ranking, posicionamiento de marcas (volumen vs. precio) y detalle con barras de datos.</sub>
+</p>
+
+<p align="center">
+  <img src="assets/dashboard_clientes.png" alt="Dashboard TechCore: página Clientes y equipo" width="860"><br>
+  <sub>Clientes y equipo: matriz por ciudad y sucursal, género, rangos de edad, vendedores y estacionalidad.</sub>
+</p>
+
 ### Interactividad
 
 * Segmentadores de **año** y **ciudad** (o marca en Productos) y botón **Limpiar** para borrar todos los filtros.
@@ -119,7 +133,7 @@ La tabla `UsuariosSeguridad` mapea correo → ciudad/sucursal (usuarios de ejemp
 │   └── TechCore.Report/            # reporte en PBIR (versionable)
 ├── 04_Documentacion/               # Conclusiones y recomendaciones
 │   └── versiones_anteriores/       # entregables originales (con cifras ×10, solo histórico)
-├── assets/
+├── assets/                         # capturas del dashboard (legacy/: diagramas históricos)
 └── requirements.txt
 ```
 
