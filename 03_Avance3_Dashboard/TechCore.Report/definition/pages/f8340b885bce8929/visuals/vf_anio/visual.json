@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "vf_anio",
+  "position": {
+    "x": 24,
+    "y": 212,
+    "z": 0,
+    "height": 240,
+    "width": 620,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "columnChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Calendario.Año",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Año"
                 }
               },
-              "nativeQueryRef": "Año"
+              "queryRef": "Calendario.Año",
+              "nativeQueryRef": "Año",
+              "active": true
             }
           ]
         },
         "Y": {
           "projections": [
             {
-              "queryRef": "_Medidas.VentasTotales",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "VentasTotales"
                 }
               },
+              "queryRef": "_Medidas.VentasTotales",
               "nativeQueryRef": "VentasTotales"
             }
           ]
@@ -56,8 +66,7 @@
             },
             "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": false
+        ]
       }
     },
     "objects": {
@@ -129,7 +138,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -164,15 +172,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 24,
-    "y": 212,
-    "width": 620,
-    "height": 240,
-    "z": 0,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

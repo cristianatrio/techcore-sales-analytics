@@ -40,3 +40,4 @@ table Productos
 				    Tipos
 
 	annotation PBI_ResultType = Table
+

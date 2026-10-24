@@ -11,3 +11,7 @@ Thumbs.db
 .DS_Store
 .vscode/
 03_Avance3_Dashboard/Avance_3_Dashboard1.pbix
+
+# Power BI: la caché contiene los datos importados; los ajustes locales son personales
+**/.pbi/cache.abf
+**/.pbi/localSettings.json

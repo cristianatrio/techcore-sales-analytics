@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "v3_disp",
+  "position": {
+    "x": 660,
+    "y": 196,
+    "z": 0,
+    "height": 290,
+    "width": 596,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "scatterChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Productos.Marca",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,50 +26,15 @@
                   "Property": "Marca"
                 }
               },
-              "nativeQueryRef": "Marca"
-            }
-          ]
-        },
-        "X": {
-          "projections": [
-            {
-              "queryRef": "_Medidas.ProductosVendidos",
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "ProductosVendidos"
-                }
-              },
-              "nativeQueryRef": "ProductosVendidos"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "queryRef": "_Medidas.PrecioPromedioUnidad",
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "PrecioPromedioUnidad"
-                }
-              },
-              "nativeQueryRef": "PrecioPromedioUnidad"
+              "queryRef": "Productos.Marca",
+              "nativeQueryRef": "Marca",
+              "active": true
             }
           ]
         },
         "Size": {
           "projections": [
             {
-              "queryRef": "_Medidas.VentasTotales",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -72,7 +45,45 @@
                   "Property": "VentasTotales"
                 }
               },
+              "queryRef": "_Medidas.VentasTotales",
               "nativeQueryRef": "VentasTotales"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ProductosVendidos"
+                }
+              },
+              "queryRef": "_Medidas.ProductosVendidos",
+              "nativeQueryRef": "ProductosVendidos",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "PrecioPromedioUnidad"
+                }
+              },
+              "queryRef": "_Medidas.PrecioPromedioUnidad",
+              "nativeQueryRef": "PrecioPromedioUnidad"
             }
           ]
         }
@@ -196,7 +207,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -258,15 +268,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 660,
-    "y": 196,
-    "width": 596,
-    "height": 290,
-    "z": 0,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

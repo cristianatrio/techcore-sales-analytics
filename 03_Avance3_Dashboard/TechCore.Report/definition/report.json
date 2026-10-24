@@ -11,10 +11,6 @@
       "type": "RegisteredResources"
     }
   },
-  "settings": {
-    "useStylableVisualContainerHeader": true,
-    "defaultDrillFilterOtherVisuals": true
-  },
   "resourcePackages": [
     {
       "name": "RegisteredResources",
@@ -27,5 +23,10 @@
         }
       ]
     }
-  ]
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultDrillFilterOtherVisuals": true,
+    "useEnhancedTooltips": false
+  }
 }

@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "v_mapa",
+  "position": {
+    "x": 440,
+    "y": 212,
+    "z": 0,
+    "height": 216,
+    "width": 430,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "map",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Ciudades.NombreCiudad",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,33 @@
                   "Property": "NombreCiudad"
                 }
               },
-              "nativeQueryRef": "NombreCiudad"
+              "queryRef": "Ciudades.NombreCiudad",
+              "nativeQueryRef": "NombreCiudad",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "VentasTotales"
+                }
+              },
+              "queryRef": "_Medidas.VentasTotales",
+              "nativeQueryRef": "VentasTotales"
             }
           ]
         },
         "X": {
           "projections": [
             {
-              "queryRef": "Average(Ciudades.Longitud)",
               "field": {
                 "Aggregation": {
                   "Expression": {
@@ -41,6 +68,7 @@
                   "Function": 1
                 }
               },
+              "queryRef": "Average(Ciudades.Longitud)",
               "nativeQueryRef": "Promedio de Longitud"
             }
           ]
@@ -48,7 +76,6 @@
         "Y": {
           "projections": [
             {
-              "queryRef": "Average(Ciudades.Latitud)",
               "field": {
                 "Aggregation": {
                   "Expression": {
@@ -64,25 +91,8 @@
                   "Function": 1
                 }
               },
+              "queryRef": "Average(Ciudades.Latitud)",
               "nativeQueryRef": "Promedio de Latitud"
-            }
-          ]
-        },
-        "Size": {
-          "projections": [
-            {
-              "queryRef": "_Medidas.VentasTotales",
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Medidas"
-                    }
-                  },
-                  "Property": "VentasTotales"
-                }
-              },
-              "nativeQueryRef": "VentasTotales"
             }
           ]
         }
@@ -205,7 +215,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -267,15 +276,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 440,
-    "y": 212,
-    "width": 430,
-    "height": 216,
-    "z": 0,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

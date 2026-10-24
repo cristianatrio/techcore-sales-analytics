@@ -18,16 +18,16 @@ table Ciudades
 	column Latitud
 		dataType: double
 		formatString: 0.0000
-		dataCategory: Latitude
 		lineageTag: d2140ada-bbec-4293-bf56-ffcc2039cf38
+		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: Latitud
 
 	column Longitud
 		dataType: double
 		formatString: 0.0000
-		dataCategory: Longitude
 		lineageTag: 6b9ff4bd-551f-47c9-9d90-04814bba12c9
+		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: Longitud
 
@@ -43,3 +43,6 @@ table Ciudades
 				    Tipos
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

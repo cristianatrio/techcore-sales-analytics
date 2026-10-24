@@ -76,3 +76,4 @@ table DetalleFacturas
 				    Tipos
 
 	annotation PBI_ResultType = Table
+

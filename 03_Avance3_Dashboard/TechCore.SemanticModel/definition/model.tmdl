@@ -1,8 +1,17 @@
 model Model
 	culture: es-AR
 	defaultPowerBIDataSourceVersion: powerBI_V3
-	sourceQueryCulture: es-AR
 	discourageImplicitMeasures
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Ciudades","Sucursales","Vendedores","Clientes","Productos","Facturas","DetalleFacturas","_Medidas","UsuariosSeguridad","RutaDatos"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
 
 ref table Ciudades
 ref table Sucursales
@@ -19,4 +28,5 @@ ref role 'Gerente Nacional'
 ref role 'Gerente Regional'
 ref role 'Gerente Sucursal'
 
-ref expression RutaDatos
+ref cultureInfo es-AR
+

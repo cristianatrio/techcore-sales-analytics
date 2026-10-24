@@ -98,7 +98,14 @@ Tema oscuro propio (`techcore.json`), navegación con botones y tres páginas de
 | Gerente Regional | Solo su ciudad |
 | Gerente Sucursal | Solo su sucursal |
 
-La tabla `UsuariosSeguridad` mapea correo → ciudad/sucursal (usuarios de ejemplo; reemplazar por los reales antes de publicar).
+La tabla `UsuariosSeguridad` mapea correo → ciudad/sucursal (usuarios de ejemplo; reemplazar por los reales antes de publicar en un servicio). Los roles se aplican **en el servicio de Power BI**: los archivos de este repositorio son públicos y no quedan protegidos por RLS.
+
+## Datos y privacidad
+
+* El dataset (`ventas.csv`) es **sintético**: no contiene personas reales. Lo delatan, por ejemplo, correos con tildes en Gmail, Hotmail y Yahoo (imposibles en esos proveedores), teléfonos con prefijo español (+34) en tiendas colombianas y errores de tipeo sembrados a propósito.
+* No hay credenciales, tokens ni cadenas de conexión en el repositorio. El modelo lee un Excel local y la ruta se configura con el parámetro `RutaDatos`.
+* La caché de Power BI (`.pbi/cache.abf`, que contiene los datos importados) y los ajustes locales están excluidos con `.gitignore`.
+* Los correos de `UsuariosSeguridad` (`admin@techcore.com`, etc.) son de ejemplo.
 
 ## Estructura del repositorio
 
@@ -111,6 +118,7 @@ La tabla `UsuariosSeguridad` mapea correo → ciudad/sucursal (usuarios de ejemp
 │   ├── TechCore.SemanticModel/     # modelo en TMDL (versionable)
 │   └── TechCore.Report/            # reporte en PBIR (versionable)
 ├── 04_Documentacion/               # Conclusiones y recomendaciones
+│   └── versiones_anteriores/       # entregables originales (con cifras ×10, solo histórico)
 ├── assets/
 └── requirements.txt
 ```

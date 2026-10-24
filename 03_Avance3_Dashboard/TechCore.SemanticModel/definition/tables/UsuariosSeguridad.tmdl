@@ -49,3 +49,4 @@ table UsuariosSeguridad
 				    Origen
 
 	annotation PBI_ResultType = Table
+

@@ -1,0 +1,152 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1541.6021531243327,
+            "y": 512.43720478201351
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "463db3a2-e7ef-4f0a-a9b0-9c9868d1448e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 413.83579877811621,
+            "y": 189.8634279712403
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "730921bd-5e52-47cc-9ae9-b71dc830fdd0",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 280.72914480078072,
+            "y": 848.70607267419246
+          },
+          "nodeIndex": "Ciudades",
+          "nodeLineageTag": "d10e53b4-f758-4374-bbad-8cb4cbfaec91",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 698.023748545996,
+            "y": -50
+          },
+          "nodeIndex": "Clientes",
+          "nodeLineageTag": "8e7a923f-3775-40ed-9f0a-82720535a917",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1023.3639673914988,
+            "y": 436.37810698643693
+          },
+          "nodeIndex": "DetalleFacturas",
+          "nodeLineageTag": "f8eb966a-ba3d-44e2-87f3-bf1f3a2941d1",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 739.09638759726272,
+            "y": 296.26741479991767
+          },
+          "nodeIndex": "Facturas",
+          "nodeLineageTag": "2460c0e2-b4cb-46a4-b6ad-ad108b30419b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1307.6021531243327,
+            "y": 581.7833656524358
+          },
+          "nodeIndex": "Productos",
+          "nodeLineageTag": "d8b23af4-5926-46d3-9a1c-ec9375511376",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 492.46377122878528,
+            "y": 646.50718140432946
+          },
+          "nodeIndex": "Sucursales",
+          "nodeLineageTag": "c993b26e-0f0e-4649-8b7d-468c204472a6",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 1074.874409564027
+          },
+          "nodeIndex": "UsuariosSeguridad",
+          "nodeLineageTag": "df0c6dd2-e6e7-4cd7-874e-34d0284a32b8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1005.40124524387,
+            "y": 118.09785963939726
+          },
+          "nodeIndex": "Vendedores",
+          "nodeLineageTag": "bf89dc44-3c57-4a9b-ab60-a8998ea64b47",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

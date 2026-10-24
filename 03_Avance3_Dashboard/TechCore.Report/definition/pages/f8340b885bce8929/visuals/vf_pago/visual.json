@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "vf_pago",
+  "position": {
+    "x": 660,
+    "y": 464,
+    "z": 0,
+    "height": 232,
+    "width": 596,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "clusteredBarChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Facturas.MetodoPago",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "MetodoPago"
                 }
               },
-              "nativeQueryRef": "MetodoPago"
+              "queryRef": "Facturas.MetodoPago",
+              "nativeQueryRef": "MetodoPago",
+              "active": true
             }
           ]
         },
         "Y": {
           "projections": [
             {
-              "queryRef": "_Medidas.VentasTotales",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "VentasTotales"
                 }
               },
+              "queryRef": "_Medidas.VentasTotales",
               "nativeQueryRef": "VentasTotales"
             }
           ]
@@ -160,7 +170,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -222,15 +231,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 660,
-    "y": 464,
-    "width": 596,
-    "height": 232,
-    "z": 0,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

@@ -27,3 +27,4 @@ table Vendedores
 				    Tipos
 
 	annotation PBI_ResultType = Table
+

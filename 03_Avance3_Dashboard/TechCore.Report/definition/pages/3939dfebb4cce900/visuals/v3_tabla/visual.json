@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "v3_tabla",
+  "position": {
+    "x": 24,
+    "y": 498,
+    "z": 0,
+    "height": 198,
+    "width": 1232,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "tableEx",
     "query": {
@@ -7,7 +16,6 @@
         "Values": {
           "projections": [
             {
-              "queryRef": "Productos.Nombre",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,11 +26,11 @@
                   "Property": "Nombre"
                 }
               },
+              "queryRef": "Productos.Nombre",
               "nativeQueryRef": "Nombre",
               "displayName": "Producto"
             },
             {
-              "queryRef": "Productos.Marca",
               "field": {
                 "Column": {
                   "Expression": {
@@ -33,10 +41,10 @@
                   "Property": "Marca"
                 }
               },
+              "queryRef": "Productos.Marca",
               "nativeQueryRef": "Marca"
             },
             {
-              "queryRef": "_Medidas.ProductosVendidos",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -47,11 +55,11 @@
                   "Property": "ProductosVendidos"
                 }
               },
+              "queryRef": "_Medidas.ProductosVendidos",
               "nativeQueryRef": "ProductosVendidos",
               "displayName": "Unidades"
             },
             {
-              "queryRef": "_Medidas.VentasTotales",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -62,11 +70,11 @@
                   "Property": "VentasTotales"
                 }
               },
+              "queryRef": "_Medidas.VentasTotales",
               "nativeQueryRef": "VentasTotales",
               "displayName": "Ventas netas"
             },
             {
-              "queryRef": "_Medidas.%ParticipacionProducto",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -77,6 +85,7 @@
                   "Property": "%ParticipacionProducto"
                 }
               },
+              "queryRef": "_Medidas.%ParticipacionProducto",
               "nativeQueryRef": "%ParticipacionProducto",
               "displayName": "% del total"
             }
@@ -235,9 +244,13 @@
             "metadata": "_Medidas.VentasTotales"
           }
         }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -272,15 +285,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 24,
-    "y": 498,
-    "width": 1232,
-    "height": 198,
-    "z": 0,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

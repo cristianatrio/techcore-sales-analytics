@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "v4_edad",
+  "position": {
+    "x": 1006,
+    "y": 116,
+    "z": 0,
+    "height": 276,
+    "width": 250,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "columnChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Clientes.Rango de edad",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Rango de edad"
                 }
               },
-              "nativeQueryRef": "Rango de edad"
+              "queryRef": "Clientes.Rango de edad",
+              "nativeQueryRef": "Rango de edad",
+              "active": true
             }
           ]
         },
         "Y": {
           "projections": [
             {
-              "queryRef": "_Medidas.Clientes",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "Clientes"
                 }
               },
+              "queryRef": "_Medidas.Clientes",
               "nativeQueryRef": "Clientes"
             }
           ]
@@ -56,8 +66,7 @@
             },
             "direction": "Ascending"
           }
-        ],
-        "isDefaultSort": false
+        ]
       }
     },
     "objects": {
@@ -129,7 +138,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -164,15 +172,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 1006,
-    "y": 116,
-    "width": 250,
-    "height": 276,
-    "z": 0,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

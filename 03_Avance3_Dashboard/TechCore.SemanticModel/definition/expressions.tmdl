@@ -1,2 +1,5 @@
 expression RutaDatos = "D:\ProyectoM3_CristianAtrio\02_Avance2_ModeloRelacional\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 50aadb86-3de1-4818-851d-a5a666037484
+
+	annotation PBI_ResultType = Text
+

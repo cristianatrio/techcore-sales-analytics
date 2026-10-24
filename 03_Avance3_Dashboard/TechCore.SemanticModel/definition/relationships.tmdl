@@ -29,3 +29,4 @@ relationship Facturas_Calendario
 relationship Seguridad_Ciudades
 	fromColumn: UsuariosSeguridad.NombreCiudad
 	toColumn: Ciudades.NombreCiudad
+

@@ -2,3 +2,6 @@ role 'Gerente Regional'
 	modelPermission: read
 
 	tablePermission Ciudades = [NombreCiudad] = LOOKUPVALUE(UsuariosSeguridad[NombreCiudad], UsuariosSeguridad[Correo], USERPRINCIPALNAME())
+
+	annotation PBI_Id = 503b220199f7474fad79e4e87a2a3807
+

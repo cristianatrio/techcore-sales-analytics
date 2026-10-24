@@ -1,2 +1,5 @@
 role 'Gerente Nacional'
 	modelPermission: read
+
+	annotation PBI_Id = b6476717538b49afac551783fa56b0fd
+

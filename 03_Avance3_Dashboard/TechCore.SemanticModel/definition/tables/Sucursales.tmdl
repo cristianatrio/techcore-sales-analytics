@@ -35,3 +35,4 @@ table Sucursales
 				    Tipos
 
 	annotation PBI_ResultType = Table
+

@@ -1,2 +1,3 @@
-database TechCore
-	compatibilityLevel: 1601
+database
+	compatibilityLevel: 1606
+

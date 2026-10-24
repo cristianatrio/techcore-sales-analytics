@@ -2,3 +2,6 @@ role 'Gerente Sucursal'
 	modelPermission: read
 
 	tablePermission Sucursales = [SucursalID] = LOOKUPVALUE(UsuariosSeguridad[SucursalID], UsuariosSeguridad[Correo], USERPRINCIPALNAME())
+
+	annotation PBI_Id = 4724dd026f9f4398a66fd96e0659be04
+

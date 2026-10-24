@@ -1,6 +1,6 @@
 table Calendario
-	dataCategory: Time
 	lineageTag: 730921bd-5e52-47cc-9ae9-b71dc830fdd0
+	dataCategory: Time
 
 	column Fecha
 		dataType: dateTime
@@ -79,3 +79,4 @@ table Calendario
 				    "DiaSemana", SWITCH(WEEKDAY([Date], 2),1,"Lun",2,"Mar",3,"Mié",4,"Jue",5,"Vie",6,"Sáb",7,"Dom"),
 				    "Cobertura", IF(YEAR([Date]) IN {2014, 2025}, "Año parcial", "Año completo")
 				)
+

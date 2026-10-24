@@ -71,3 +71,4 @@ table Clientes
 				    Tipos
 
 	annotation PBI_ResultType = Table
+

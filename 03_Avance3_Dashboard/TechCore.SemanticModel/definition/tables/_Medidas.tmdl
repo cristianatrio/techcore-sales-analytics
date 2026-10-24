@@ -18,7 +18,7 @@ table _Medidas
 		displayFolder: 1. Ventas
 		lineageTag: a528d868-75e9-44d0-8a8b-3162578969d6
 
-	measure '%Descuento' = DIVIDE([Descuentos], [VentasBrutas])
+	measure %Descuento = DIVIDE([Descuentos], [VentasBrutas])
 		formatString: 0.0%
 		displayFolder: 1. Ventas
 		lineageTag: 1b9a27d7-bf42-4363-aa1f-50e56127d7bf
@@ -48,41 +48,41 @@ table _Medidas
 		displayFolder: 2. Volumen
 		lineageTag: 01a995cb-6a45-417b-a077-fa4f0b57db06
 
-	measure '%ParticipacionCiudad' = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Ciudades)))
+	measure %ParticipacionCiudad = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Ciudades)))
 		formatString: 0.0%
 		displayFolder: 3. Participación
 		lineageTag: 5be49606-b9a6-4c04-a151-edd2190584a4
 
-	measure '%ParticipacionProducto' = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Productos)))
+	measure %ParticipacionProducto = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Productos)))
 		formatString: 0.0%
 		displayFolder: 3. Participación
 		lineageTag: fe377503-2bf4-4626-98c1-0967b23e47ca
 
-	measure '%ParticipacionMarca' = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Productos[Marca])))
+	measure %ParticipacionMarca = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Productos[Marca])))
 		formatString: 0.0%
 		displayFolder: 3. Participación
 		lineageTag: 0224bf74-0214-468c-bc80-fa832bc65e89
 
 	/// Mismo período del año anterior, recortado a la última fecha con ventas (comparación justa en 2025 YTD).
 	measure VentasAnioAnterior =
-				VAR _hasta = MAX(Facturas[Fecha])
-				RETURN
-				    CALCULATE(
-				        [VentasTotales],
-				        SAMEPERIODLASTYEAR(Calendario[Fecha]),
-				        Calendario[Fecha] <= EDATE(_hasta, -12)
-				    )
+			VAR _hasta = MAX(Facturas[Fecha])
+			RETURN
+			    CALCULATE(
+			        [VentasTotales],
+			        SAMEPERIODLASTYEAR(Calendario[Fecha]),
+			        Calendario[Fecha] <= EDATE(_hasta, -12)
+			    )
 		formatString: \$#,0
 		displayFolder: 4. Inteligencia de tiempo
 		lineageTag: d065c221-af10-43a4-9b7d-e7b2916bb7c0
 
 	/// Crecimiento del último año seleccionado frente al mismo período del año anterior (año parcial comparado de forma justa).
 	measure CrecimientoYoY =
-				VAR _anio = MAX(Calendario[Año])
-				VAR _hasta = CALCULATE(MAX(Facturas[Fecha]), REMOVEFILTERS(Calendario), Calendario[Año] = _anio)
-				VAR _actual = CALCULATE([VentasTotales], REMOVEFILTERS(Calendario), Calendario[Año] = _anio)
-				VAR _previo = CALCULATE([VentasTotales], REMOVEFILTERS(Calendario), Calendario[Año] = _anio - 1, Calendario[Fecha] <= EDATE(_hasta, -12))
-				RETURN IF(NOT ISBLANK(_previo), DIVIDE(_actual - _previo, _previo))
+			VAR _anio = MAX(Calendario[Año])
+			VAR _hasta = CALCULATE(MAX(Facturas[Fecha]), REMOVEFILTERS(Calendario), Calendario[Año] = _anio)
+			VAR _actual = CALCULATE([VentasTotales], REMOVEFILTERS(Calendario), Calendario[Año] = _anio)
+			VAR _previo = CALCULATE([VentasTotales], REMOVEFILTERS(Calendario), Calendario[Año] = _anio - 1, Calendario[Fecha] <= EDATE(_hasta, -12))
+			RETURN IF(NOT ISBLANK(_previo), DIVIDE(_actual - _previo, _previo))
 		formatString: +0.0%;-0.0%;0.0%
 		displayFolder: 4. Inteligencia de tiempo
 		lineageTag: cd647b55-bc16-4edb-933f-9813a4cb8c9e
@@ -120,11 +120,19 @@ table _Medidas
 		lineageTag: 0cb5fe54-3c0a-41ba-b604-57a28a9077d7
 
 	measure TituloPeriodo =
-				VAR _min = MIN(Calendario[Fecha])
-				VAR _max = MAX(Calendario[Fecha])
-				RETURN FORMAT(_min, "dd/mm/yyyy") & "  →  " & FORMAT(MIN(_max, MAX(Facturas[Fecha])), "dd/mm/yyyy")
+			VAR _min = MIN(Calendario[Fecha])
+			VAR _max = MAX(Calendario[Fecha])
+			RETURN FORMAT(_min, "dd/mm/yyyy") & "  →  " & FORMAT(MIN(_max, MAX(Facturas[Fecha])), "dd/mm/yyyy")
 		displayFolder: 5. Formato
 		lineageTag: abb8534a-7117-4092-93ca-4b4509f37e4b
+
+	column Columna1
+		dataType: string
+		lineageTag: af48a132-aacd-48c7-acf9-986ac967e7cf
+		summarizeBy: none
+		sourceColumn: Columna1
+
+		annotation SummarizationSetBy = Automatic
 
 	partition _Medidas = m
 		mode: import
@@ -135,3 +143,4 @@ table _Medidas
 				    Origen
 
 	annotation PBI_ResultType = Table
+

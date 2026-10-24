@@ -11,10 +11,12 @@ table Facturas
 
 	column Fecha
 		dataType: dateTime
-		formatString: dd/mm/yyyy
+		formatString: Long Date
 		lineageTag: f1723a8e-51ba-475b-8687-982c4fa5f83a
 		summarizeBy: none
 		sourceColumn: Fecha
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Hora
 		dataType: dateTime
@@ -22,6 +24,8 @@ table Facturas
 		lineageTag: 7c756cc1-3b47-4171-a04b-fd791595b8ab
 		summarizeBy: none
 		sourceColumn: Hora
+
+		annotation UnderlyingDateTimeDataType = Time
 
 	column SucursalID
 		dataType: int64
@@ -96,3 +100,4 @@ table Facturas
 				    Tipos
 
 	annotation PBI_ResultType = Table
+

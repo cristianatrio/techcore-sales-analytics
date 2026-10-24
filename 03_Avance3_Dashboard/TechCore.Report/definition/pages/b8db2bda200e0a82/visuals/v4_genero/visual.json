@@ -1,5 +1,14 @@
 {
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "v4_genero",
+  "position": {
+    "x": 740,
+    "y": 116,
+    "z": 0,
+    "height": 276,
+    "width": 250,
+    "tabOrder": 0
+  },
   "visual": {
     "visualType": "donutChart",
     "query": {
@@ -7,7 +16,6 @@
         "Category": {
           "projections": [
             {
-              "queryRef": "Clientes.Genero",
               "field": {
                 "Column": {
                   "Expression": {
@@ -18,14 +26,15 @@
                   "Property": "Genero"
                 }
               },
-              "nativeQueryRef": "Genero"
+              "queryRef": "Clientes.Genero",
+              "nativeQueryRef": "Genero",
+              "active": true
             }
           ]
         },
         "Y": {
           "projections": [
             {
-              "queryRef": "_Medidas.Clientes",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -36,6 +45,7 @@
                   "Property": "Clientes"
                 }
               },
+              "queryRef": "_Medidas.Clientes",
               "nativeQueryRef": "Clientes"
             }
           ]
@@ -116,7 +126,6 @@
         }
       ]
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -151,15 +160,7 @@
           }
         }
       ]
-    }
-  },
-  "position": {
-    "x": 740,
-    "y": 116,
-    "width": 250,
-    "height": 276,
-    "z": 0,
-    "tabOrder": 0
-  },
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json"
+    },
+    "drillFilterOtherVisuals": true
+  }
 }
