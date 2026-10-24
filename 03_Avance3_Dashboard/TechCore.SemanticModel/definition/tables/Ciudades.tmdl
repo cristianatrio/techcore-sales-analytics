@@ -1,0 +1,29 @@
+table Ciudades
+	lineageTag: 079fbef0-18b6-4202-94e1-cdf26c3ac7bc
+
+	column CiudadID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cd9cf138-4195-4632-93fb-2535c966d76f
+		summarizeBy: none
+		sourceColumn: CiudadID
+
+	column NombreCiudad
+		dataType: string
+		lineageTag: d97502a6-b463-44cb-9165-d1c5dff07b64
+		summarizeBy: none
+		sourceColumn: NombreCiudad
+
+	partition Ciudades = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents(RutaDatos & "modeloVentas.xlsx"), null, true),
+				    Hoja = Origen{[Item="Ciudades",Kind="Sheet"]}[Data],
+				    Encabezados = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"CiudadID", Int64.Type}, {"NombreCiudad", type text}})
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table

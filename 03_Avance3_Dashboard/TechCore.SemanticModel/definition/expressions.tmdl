@@ -1,0 +1,2 @@
+expression RutaDatos = "D:\ProyectoM3_CristianAtrio\02_Avance2_ModeloRelacional\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 92023ce4-1caf-48ef-9c38-df3c5c4da9d4

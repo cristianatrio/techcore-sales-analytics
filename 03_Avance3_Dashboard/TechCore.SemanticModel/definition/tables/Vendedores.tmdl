@@ -1,0 +1,29 @@
+table Vendedores
+	lineageTag: d87c134b-91b7-43d7-84ab-e5960e8b586f
+
+	column VendedorID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1acf6eab-ea41-41ee-b28d-44517967449f
+		summarizeBy: none
+		sourceColumn: VendedorID
+
+	column NombreVendedor
+		dataType: string
+		lineageTag: b824212a-c051-4a7b-b038-b2fec9aad4e6
+		summarizeBy: none
+		sourceColumn: NombreVendedor
+
+	partition Vendedores = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents(RutaDatos & "modeloVentas.xlsx"), null, true),
+				    Hoja = Origen{[Item="Vendedores",Kind="Sheet"]}[Data],
+				    Encabezados = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"VendedorID", Int64.Type}, {"NombreVendedor", type text}})
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table

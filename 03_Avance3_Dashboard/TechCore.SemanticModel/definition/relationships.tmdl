@@ -1,0 +1,31 @@
+relationship Sucursales_Ciudades
+	fromColumn: Sucursales.CiudadID
+	toColumn: Ciudades.CiudadID
+
+relationship Facturas_Clientes
+	fromColumn: Facturas.ClienteID
+	toColumn: Clientes.ClienteID
+
+relationship Detalle_Facturas
+	fromColumn: DetalleFacturas.FacturaID
+	toColumn: Facturas.FacturaID
+
+relationship Detalle_Productos
+	fromColumn: DetalleFacturas.ProductoID
+	toColumn: Productos.ProductoID
+
+relationship Facturas_Sucursales
+	fromColumn: Facturas.SucursalID
+	toColumn: Sucursales.SucursalID
+
+relationship Facturas_Vendedores
+	fromColumn: Facturas.VendedorID
+	toColumn: Vendedores.VendedorID
+
+relationship Facturas_Calendario
+	fromColumn: Facturas.Fecha
+	toColumn: Calendario.Fecha
+
+relationship Seguridad_Ciudades
+	fromColumn: UsuariosSeguridad.NombreCiudad
+	toColumn: Ciudades.NombreCiudad

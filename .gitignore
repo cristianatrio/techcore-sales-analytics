@@ -1,0 +1,13 @@
+# Power BI
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+*.pbix.bak
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+# SO / editores
+Thumbs.db
+.DS_Store
+.vscode/
+03_Avance3_Dashboard/Avance_3_Dashboard1.pbix

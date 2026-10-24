@@ -1,0 +1,42 @@
+table Productos
+	lineageTag: 74d56ac2-1010-49ef-b87e-efe8551d38be
+
+	column ProductoID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dd57db10-c7c7-473a-a1d0-26df0e720a5b
+		summarizeBy: none
+		sourceColumn: ProductoID
+
+	column Nombre
+		dataType: string
+		lineageTag: be2899e7-cd98-4b18-a5aa-7360c2aa8c7b
+		summarizeBy: none
+		sourceColumn: Nombre
+
+	column Marca
+		dataType: string
+		lineageTag: 8db15947-a345-42cf-b25a-a67c8c5bbc35
+		summarizeBy: none
+		sourceColumn: Marca
+
+	column Precio
+		dataType: int64
+		formatString: \$#,0
+		lineageTag: 321c6fd5-752e-44ec-a31b-0da295afe95e
+		summarizeBy: none
+		sourceColumn: Precio
+
+	partition Productos = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents(RutaDatos & "modeloVentas.xlsx"), null, true),
+				    Hoja = Origen{[Item="Productos",Kind="Sheet"]}[Data],
+				    Encabezados = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"ProductoID", Int64.Type}, {"Nombre", type text}, {"Marca", type text}, {"Precio", Int64.Type}})
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table

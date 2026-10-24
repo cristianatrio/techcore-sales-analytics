@@ -1,0 +1,4 @@
+role 'Gerente Sucursal'
+	modelPermission: read
+
+	tablePermission Sucursales = [SucursalID] = LOOKUPVALUE(UsuariosSeguridad[SucursalID], UsuariosSeguridad[Correo], USERPRINCIPALNAME())

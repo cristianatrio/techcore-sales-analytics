@@ -1,0 +1,2 @@
+role 'Gerente Nacional'
+	modelPermission: read

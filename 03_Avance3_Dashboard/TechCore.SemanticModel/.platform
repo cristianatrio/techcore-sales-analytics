@@ -1,0 +1,5 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {"type": "SemanticModel", "displayName": "TechCore"},
+  "config": {"version": "2.0", "logicalId": "ef877605-1b4c-4a68-ae47-f8005d9687c6"}
+}

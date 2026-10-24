@@ -1,0 +1,81 @@
+table Calendario
+	dataCategory: Time
+	lineageTag: c1bf7e59-76bd-4bc5-9c65-0fd87b263260
+
+	column Fecha
+		dataType: dateTime
+		isKey
+		formatString: dd/mm/yyyy
+		lineageTag: 6609099b-4824-484c-867b-ee9b6d3841e9
+		summarizeBy: none
+		sourceColumn: [Date]
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: d102670e-8d2d-4698-9a55-11c774b90c69
+		summarizeBy: none
+		sourceColumn: [Año]
+
+	column NroMes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8d7da65c-8b2c-4553-85e0-4b41c9f080c1
+		summarizeBy: none
+		sourceColumn: [NroMes]
+
+	column Mes
+		dataType: string
+		lineageTag: 9af85003-ae91-41fc-86da-1e70b86d7afc
+		summarizeBy: none
+		sourceColumn: [Mes]
+		sortByColumn: NroMes
+
+	column Trimestre
+		dataType: string
+		lineageTag: 5523e7e7-a681-4ca9-94d2-3a7a57034c47
+		summarizeBy: none
+		sourceColumn: [Trimestre]
+
+	column AñoMes
+		dataType: string
+		lineageTag: 13dcae2e-9949-46e5-aca4-8ed553b1f220
+		summarizeBy: none
+		sourceColumn: [AñoMes]
+
+	column NroDiaSemana
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0d3045a4-db1f-4593-824c-bbd704e8a810
+		summarizeBy: none
+		sourceColumn: [NroDiaSemana]
+
+	column DiaSemana
+		dataType: string
+		lineageTag: 7b53e9a3-63c0-47bc-a0cc-ba12843cff50
+		summarizeBy: none
+		sourceColumn: [DiaSemana]
+		sortByColumn: NroDiaSemana
+
+	column Cobertura
+		dataType: string
+		lineageTag: 54ea2675-77a9-42f9-bc33-08d2189615c3
+		summarizeBy: none
+		sourceColumn: [Cobertura]
+
+	partition Calendario = calculated
+		mode: import
+		source =
+				ADDCOLUMNS(
+				    CALENDAR(DATE(YEAR(MIN(Facturas[Fecha])),1,1), DATE(YEAR(MAX(Facturas[Fecha])),12,31)),
+				    "Año", YEAR([Date]),
+				    "NroMes", MONTH([Date]),
+				    "Mes", SWITCH(MONTH([Date]),1,"Ene",2,"Feb",3,"Mar",4,"Abr",5,"May",6,"Jun",7,"Jul",8,"Ago",9,"Sep",10,"Oct",11,"Nov",12,"Dic"),
+				    "Trimestre", "T" & QUARTER([Date]),
+				    "AñoMes", FORMAT([Date], "yyyy-MM"),
+				    "NroDiaSemana", WEEKDAY([Date], 2),
+				    "DiaSemana", SWITCH(WEEKDAY([Date], 2),1,"Lun",2,"Mar",3,"Mié",4,"Jue",5,"Vie",6,"Sáb",7,"Dom"),
+				    "Cobertura", IF(YEAR([Date]) IN {2014, 2025}, "Año parcial", "Año completo")
+				)

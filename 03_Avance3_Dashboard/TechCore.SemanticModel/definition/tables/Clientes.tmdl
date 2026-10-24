@@ -1,0 +1,60 @@
+table Clientes
+	lineageTag: 7a5cc144-92be-44e2-9fbd-7fe408cd5878
+
+	column ClienteID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e80d06a5-7a97-4408-90dd-d6ae602cf722
+		summarizeBy: none
+		sourceColumn: ClienteID
+
+	column Nombre
+		dataType: string
+		lineageTag: 1066dd9e-6632-494c-be00-3c39efc2ef07
+		summarizeBy: none
+		sourceColumn: Nombre
+
+	column Genero
+		dataType: string
+		lineageTag: 5ade5206-86bc-4195-9052-d9532da17575
+		summarizeBy: none
+		sourceColumn: Genero
+
+	column Edad
+		dataType: int64
+		formatString: 0
+		lineageTag: 21851a7f-06bd-420a-81d2-cc1b5e0386d0
+		summarizeBy: none
+		sourceColumn: Edad
+
+	column Email
+		dataType: string
+		lineageTag: 059e580e-3615-4a17-8f3f-6a7f27bd3a4b
+		summarizeBy: none
+		sourceColumn: Email
+
+	column Telefono
+		dataType: string
+		lineageTag: 3feb6582-0c62-40b3-869f-6accfc72ba1a
+		summarizeBy: none
+		sourceColumn: Telefono
+
+	column Direccion
+		dataType: string
+		lineageTag: ed2cedf6-7281-49e4-b277-86642c5770b0
+		summarizeBy: none
+		sourceColumn: Direccion
+
+	partition Clientes = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents(RutaDatos & "modeloVentas.xlsx"), null, true),
+				    Hoja = Origen{[Item="Clientes",Kind="Sheet"]}[Data],
+				    Encabezados = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"ClienteID", Int64.Type}, {"Nombre", type text}, {"Genero", type text}, {"Edad", Int64.Type}, {"Email", type text}, {"Telefono", type text}, {"Direccion", type text}})
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table

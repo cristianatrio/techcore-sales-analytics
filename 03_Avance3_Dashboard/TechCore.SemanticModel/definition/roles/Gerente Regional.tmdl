@@ -1,0 +1,4 @@
+role 'Gerente Regional'
+	modelPermission: read
+
+	tablePermission Ciudades = [NombreCiudad] = LOOKUPVALUE(UsuariosSeguridad[NombreCiudad], UsuariosSeguridad[Correo], USERPRINCIPALNAME())

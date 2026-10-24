@@ -1,0 +1,51 @@
+table UsuariosSeguridad
+	isHidden
+	lineageTag: 87d9336b-5dcf-49ba-85c2-e4cf3e71e015
+
+	column Nombre
+		dataType: string
+		lineageTag: 4a3d0cc6-bc25-46f9-8412-a3d4f9bd2a7f
+		summarizeBy: none
+		sourceColumn: Nombre
+
+	column Correo
+		dataType: string
+		lineageTag: 14c2435a-74c8-4452-9a86-5ac042894523
+		summarizeBy: none
+		sourceColumn: Correo
+
+	column Rol
+		dataType: string
+		lineageTag: ba9f7349-da82-4105-809a-184b6ddc9c12
+		summarizeBy: none
+		sourceColumn: Rol
+
+	column NombreCiudad
+		dataType: string
+		lineageTag: 3b6b8e82-0426-4399-ac44-5797c3f0f0f5
+		summarizeBy: none
+		sourceColumn: NombreCiudad
+
+	column SucursalID
+		dataType: int64
+		formatString: 0
+		lineageTag: 73603a66-8a3e-4cdf-9a89-78f994049546
+		summarizeBy: none
+		sourceColumn: SucursalID
+
+	partition UsuariosSeguridad = m
+		mode: import
+		source =
+				let
+				    Origen = #table(
+				        type table [Nombre = text, Correo = text, Rol = text, NombreCiudad = text, SucursalID = Int64.Type],
+				        {
+				            {"Admin", "admin@techcore.com", "Gerente Nacional", null, null},
+				            {"Juan Regional", "regional@techcore.com", "Gerente Regional", "Bogotá", null},
+				            {"Ana Sucursal", "sucursal@techcore.com", "Gerente Sucursal", null, 1}
+				        }
+				    )
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
