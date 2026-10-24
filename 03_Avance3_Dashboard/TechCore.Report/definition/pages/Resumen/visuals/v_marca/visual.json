@@ -95,6 +95,13 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -113,6 +120,26 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "50L"
                 }
               }
             }
@@ -172,9 +199,9 @@
   },
   "position": {
     "x": 24,
-    "y": 488,
-    "width": 408,
-    "height": 208,
+    "y": 452,
+    "width": 620,
+    "height": 244,
     "z": 0,
     "tabOrder": 0
   },

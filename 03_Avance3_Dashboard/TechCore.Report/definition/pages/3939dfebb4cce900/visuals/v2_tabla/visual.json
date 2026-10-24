@@ -18,7 +18,8 @@
                   "Property": "Nombre"
                 }
               },
-              "nativeQueryRef": "Nombre"
+              "nativeQueryRef": "Nombre",
+              "displayName": "Producto"
             },
             {
               "queryRef": "Productos.Marca",
@@ -46,7 +47,8 @@
                   "Property": "ProductosVendidos"
                 }
               },
-              "nativeQueryRef": "ProductosVendidos"
+              "nativeQueryRef": "ProductosVendidos",
+              "displayName": "Unidades"
             },
             {
               "queryRef": "_Medidas.VentasTotales",
@@ -60,10 +62,11 @@
                   "Property": "VentasTotales"
                 }
               },
-              "nativeQueryRef": "VentasTotales"
+              "nativeQueryRef": "VentasTotales",
+              "displayName": "Ventas netas"
             },
             {
-              "queryRef": "_Medidas.%ParticipacionMarca",
+              "queryRef": "_Medidas.%ParticipacionProducto",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -71,10 +74,11 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "%ParticipacionMarca"
+                  "Property": "%ParticipacionProducto"
                 }
               },
-              "nativeQueryRef": "%ParticipacionMarca"
+              "nativeQueryRef": "%ParticipacionProducto",
+              "displayName": "% del total"
             }
           ]
         }
@@ -98,7 +102,21 @@
         "isDefaultSort": true
       }
     },
-    "objects": {},
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
@@ -114,7 +132,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Detalle de productos'"
+                  "Value": "'Detalle por producto'"
                 }
               }
             }
@@ -138,9 +156,9 @@
   },
   "position": {
     "x": 24,
-    "y": 488,
+    "y": 452,
     "width": 1232,
-    "height": 208,
+    "height": 244,
     "z": 0,
     "tabOrder": 0
   },

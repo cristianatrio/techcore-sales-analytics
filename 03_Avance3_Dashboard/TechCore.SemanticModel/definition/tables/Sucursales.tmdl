@@ -1,17 +1,17 @@
 table Sucursales
-	lineageTag: adda0e83-1305-43f5-9702-86906f01f7c4
+	lineageTag: a22059db-0ce5-473f-b16d-5c6adae2d235
 
 	column SucursalID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 65adbbef-8151-43d1-9a8b-b059c0395a74
+		lineageTag: 4b9185c8-97c6-458b-ab67-8695ec9c635d
 		summarizeBy: none
 		sourceColumn: SucursalID
 
 	column NombreSucursal
 		dataType: string
-		lineageTag: e5a8002c-5de7-41c1-a1f0-8985028a5f7f
+		lineageTag: b6af6731-e29d-4c23-96ea-aeee5c6d0283
 		summarizeBy: none
 		sourceColumn: NombreSucursal
 
@@ -19,7 +19,7 @@ table Sucursales
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 48e6c6be-1d4b-46da-8f67-ec93e870ea00
+		lineageTag: 4fbf7c71-4d4f-44ad-a2d1-2c01ab3225c3
 		summarizeBy: none
 		sourceColumn: CiudadID
 

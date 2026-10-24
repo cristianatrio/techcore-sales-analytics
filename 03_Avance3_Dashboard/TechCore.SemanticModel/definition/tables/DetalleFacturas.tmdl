@@ -1,11 +1,11 @@
 table DetalleFacturas
-	lineageTag: c3bec9e3-0c48-4947-80df-9a4f505f6b2f
+	lineageTag: 5d70f085-e557-4e0a-a9e2-7c60a0047488
 
 	column DetalleID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: cc5b1451-4161-4cb1-8438-332e5d13bbb8
+		lineageTag: 1d4a182f-685f-4930-8ee9-99bff8c2ebd8
 		summarizeBy: none
 		sourceColumn: DetalleID
 
@@ -13,7 +13,7 @@ table DetalleFacturas
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 3fe0affd-0842-43f0-baab-5e4fcb54e252
+		lineageTag: f06062cb-aa2f-4e3b-ba57-3a7c9ae7057d
 		summarizeBy: none
 		sourceColumn: FacturaID
 
@@ -21,7 +21,7 @@ table DetalleFacturas
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 33c033a8-c7a6-416e-953e-904737111268
+		lineageTag: 9348c508-329b-48b4-b366-57422714182d
 		summarizeBy: none
 		sourceColumn: ProductoID
 
@@ -29,7 +29,7 @@ table DetalleFacturas
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 5c6b329d-2973-4d14-ae7e-63160f69e5e6
+		lineageTag: c0619fbf-4fa0-46fb-a7c5-816e0840e6c7
 		summarizeBy: sum
 		sourceColumn: Cantidad
 
@@ -37,7 +37,7 @@ table DetalleFacturas
 		dataType: int64
 		isHidden
 		formatString: \$#,0
-		lineageTag: 9fa32e38-8bfa-477a-aa2d-7bac35361e2c
+		lineageTag: b19b7197-813f-4476-b34f-b087b3ec7a8a
 		summarizeBy: sum
 		sourceColumn: PrecioUnitario
 
@@ -45,14 +45,14 @@ table DetalleFacturas
 		dataType: int64
 		isHidden
 		formatString: \$#,0
-		lineageTag: 1c64059d-8c40-43d8-99e3-5b2bfc1f15f5
+		lineageTag: 9b77f9ea-75ec-4ee7-afad-e73fa6a075e2
 		summarizeBy: sum
 		sourceColumn: Subtotal
 
 	column DescuentoPct
 		dataType: double
 		formatString: 0%
-		lineageTag: dd0a36ea-e507-45b4-bb93-d7e8e06bcdc6
+		lineageTag: 2c234e58-f1ad-4851-9b38-0f3c638bc2f0
 		summarizeBy: none
 		sourceColumn: DescuentoPct
 
@@ -60,7 +60,7 @@ table DetalleFacturas
 		dataType: double
 		isHidden
 		formatString: \$#,0
-		lineageTag: 95cf4828-c48a-4069-8781-31a46a2b4097
+		lineageTag: d02ef172-8a1f-4e83-8f4d-32e6eb8b1e6f
 		summarizeBy: sum
 		sourceColumn: SubtotalNeto
 

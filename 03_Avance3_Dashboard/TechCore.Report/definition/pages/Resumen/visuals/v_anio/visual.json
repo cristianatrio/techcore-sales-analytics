@@ -1,13 +1,13 @@
 {
-  "name": "v_tend",
+  "name": "v_anio",
   "visual": {
-    "visualType": "areaChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
-              "queryRef": "Calendario.AñoMes",
+              "queryRef": "Calendario.Año",
               "field": {
                 "Column": {
                   "Expression": {
@@ -15,17 +15,17 @@
                       "Entity": "Calendario"
                     }
                   },
-                  "Property": "AñoMes"
+                  "Property": "Año"
                 }
               },
-              "nativeQueryRef": "AñoMes"
+              "nativeQueryRef": "Año"
             }
           ]
         },
         "Y": {
           "projections": [
             {
-              "queryRef": "_Medidas.VentasMovil12M",
+              "queryRef": "_Medidas.VentasTotales",
               "field": {
                 "Measure": {
                   "Expression": {
@@ -33,10 +33,28 @@
                       "Entity": "_Medidas"
                     }
                   },
-                  "Property": "VentasMovil12M"
+                  "Property": "VentasTotales"
                 }
               },
-              "nativeQueryRef": "VentasMovil12M"
+              "nativeQueryRef": "VentasTotales"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "queryRef": "Calendario.Cobertura",
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calendario"
+                    }
+                  },
+                  "Property": "Cobertura"
+                }
+              },
+              "nativeQueryRef": "Cobertura"
             }
           ]
         }
@@ -51,7 +69,7 @@
                     "Entity": "Calendario"
                   }
                 },
-                "Property": "AñoMes"
+                "Property": "Año"
               }
             },
             "direction": "Ascending"
@@ -61,9 +79,63 @@
       }
     },
     "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bottom'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "valueAxis": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
@@ -71,36 +143,17 @@
                 }
               }
             },
-            "show": {
+            "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "0L"
                 }
               }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "show": {
+            },
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "9D"
                 }
               }
             }
@@ -123,7 +176,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ventas acumuladas de los últimos 12 meses'"
+                  "Value": "'Ventas por año (ámbar = año parcial)'"
                 }
               }
             }
@@ -147,9 +200,9 @@
   },
   "position": {
     "x": 24,
-    "y": 228,
-    "width": 760,
-    "height": 244,
+    "y": 216,
+    "width": 580,
+    "height": 224,
     "z": 0,
     "tabOrder": 0
   },

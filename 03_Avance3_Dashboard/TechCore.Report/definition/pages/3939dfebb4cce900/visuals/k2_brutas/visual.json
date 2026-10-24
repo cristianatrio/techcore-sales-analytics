@@ -62,7 +62,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "24D"
                 }
               }
             },
@@ -136,7 +136,7 @@
     "x": 856,
     "y": 116,
     "width": 400,
-    "height": 96,
+    "height": 88,
     "z": 0,
     "tabOrder": 0
   },

@@ -1,17 +1,17 @@
 table Ciudades
-	lineageTag: 079fbef0-18b6-4202-94e1-cdf26c3ac7bc
+	lineageTag: 5aa9f5a3-82f1-4b19-afe9-c5845e07bf56
 
 	column CiudadID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: cd9cf138-4195-4632-93fb-2535c966d76f
+		lineageTag: 07a1c9f2-1bf5-41c3-af00-e3939266ba3c
 		summarizeBy: none
 		sourceColumn: CiudadID
 
 	column NombreCiudad
 		dataType: string
-		lineageTag: d97502a6-b463-44cb-9165-d1c5dff07b64
+		lineageTag: 88f96547-b7b6-48f1-b7c9-cd63009c24c2
 		summarizeBy: none
 		sourceColumn: NombreCiudad
 

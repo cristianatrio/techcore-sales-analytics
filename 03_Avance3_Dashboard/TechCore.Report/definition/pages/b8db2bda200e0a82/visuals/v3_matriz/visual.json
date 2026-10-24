@@ -18,7 +18,8 @@
                   "Property": "NombreCiudad"
                 }
               },
-              "nativeQueryRef": "NombreCiudad"
+              "nativeQueryRef": "NombreCiudad",
+              "displayName": "Ciudad"
             },
             {
               "queryRef": "Sucursales.NombreSucursal",
@@ -32,7 +33,8 @@
                   "Property": "NombreSucursal"
                 }
               },
-              "nativeQueryRef": "NombreSucursal"
+              "nativeQueryRef": "NombreSucursal",
+              "displayName": "Sucursal"
             }
           ]
         },
@@ -50,7 +52,8 @@
                   "Property": "VentasTotales"
                 }
               },
-              "nativeQueryRef": "VentasTotales"
+              "nativeQueryRef": "VentasTotales",
+              "displayName": "Ventas netas"
             },
             {
               "queryRef": "_Medidas.NroFacturas",
@@ -64,7 +67,8 @@
                   "Property": "NroFacturas"
                 }
               },
-              "nativeQueryRef": "NroFacturas"
+              "nativeQueryRef": "NroFacturas",
+              "displayName": "Facturas"
             },
             {
               "queryRef": "_Medidas.TicketPromedio",
@@ -78,7 +82,8 @@
                   "Property": "TicketPromedio"
                 }
               },
-              "nativeQueryRef": "TicketPromedio"
+              "nativeQueryRef": "TicketPromedio",
+              "displayName": "Ticket promedio"
             },
             {
               "queryRef": "_Medidas.%ParticipacionCiudad",
@@ -92,7 +97,8 @@
                   "Property": "%ParticipacionCiudad"
                 }
               },
-              "nativeQueryRef": "%ParticipacionCiudad"
+              "nativeQueryRef": "%ParticipacionCiudad",
+              "displayName": "% del total"
             }
           ]
         }

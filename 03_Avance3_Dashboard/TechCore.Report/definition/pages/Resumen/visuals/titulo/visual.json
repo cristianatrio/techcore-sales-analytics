@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "titulo_5834",
+  "name": "titulo_741f78a5a08a2d99",
   "position": {
     "x": 24,
-    "y": 20,
+    "y": 14,
     "z": 0,
-    "height": 84,
+    "height": 96,
     "width": 404,
     "tabOrder": 0
   },
@@ -22,7 +22,7 @@
                     "value": "TechCore",
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
-                      "fontSize": "34pt",
+                      "fontSize": "28pt",
                       "fontWeight": "bold",
                       "color": "#22D3EE"
                     }
@@ -32,44 +32,16 @@
               {
                 "textRuns": [
                   {
-                    "value": "Productos y marcas · mix de portafolio",
+                    "value": "Resumen ejecutivo · ventas 2014 – 2025",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "12pt",
+                      "fontSize": "11pt",
                       "color": "#8FA0C0"
                     }
                   }
                 ]
               }
             ]
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
           }
         }
       ]

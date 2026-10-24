@@ -1,35 +1,35 @@
 table UsuariosSeguridad
 	isHidden
-	lineageTag: 87d9336b-5dcf-49ba-85c2-e4cf3e71e015
+	lineageTag: edd9c202-1d91-460c-ad3c-686ca39fa476
 
 	column Nombre
 		dataType: string
-		lineageTag: 4a3d0cc6-bc25-46f9-8412-a3d4f9bd2a7f
+		lineageTag: 4986dec1-ae1b-410b-9567-8a5a028d799b
 		summarizeBy: none
 		sourceColumn: Nombre
 
 	column Correo
 		dataType: string
-		lineageTag: 14c2435a-74c8-4452-9a86-5ac042894523
+		lineageTag: e1bd6ac6-60a0-4925-9e3e-518ed50333d1
 		summarizeBy: none
 		sourceColumn: Correo
 
 	column Rol
 		dataType: string
-		lineageTag: ba9f7349-da82-4105-809a-184b6ddc9c12
+		lineageTag: 378634cf-3e17-4fd3-870b-cdac0fccef97
 		summarizeBy: none
 		sourceColumn: Rol
 
 	column NombreCiudad
 		dataType: string
-		lineageTag: 3b6b8e82-0426-4399-ac44-5797c3f0f0f5
+		lineageTag: 7c189251-6864-41f0-b6b5-e098a4f69f59
 		summarizeBy: none
 		sourceColumn: NombreCiudad
 
 	column SucursalID
 		dataType: int64
 		formatString: 0
-		lineageTag: 73603a66-8a3e-4cdf-9a89-78f994049546
+		lineageTag: 0c9fad45-55e9-4e8d-8714-7abc299b5c6b
 		summarizeBy: none
 		sourceColumn: SucursalID
 

@@ -1,25 +1,25 @@
 table Facturas
-	lineageTag: 0fc742f3-c607-4260-9534-45f4a2fec77e
+	lineageTag: c026aa79-bff6-4088-8908-2dd2d9237e45
 
 	column FacturaID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 6fd12eed-9856-440b-9b41-b651f30ea301
+		lineageTag: 0225822b-d8ac-4c7f-a0ec-ea96b9323219
 		summarizeBy: none
 		sourceColumn: FacturaID
 
 	column Fecha
 		dataType: dateTime
 		formatString: dd/mm/yyyy
-		lineageTag: 2973d769-73f6-42bf-962c-094f1663e9c8
+		lineageTag: 241d4796-c4e8-4e70-a2d7-b833273bf77e
 		summarizeBy: none
 		sourceColumn: Fecha
 
 	column Hora
 		dataType: dateTime
 		formatString: hh:mm:ss
-		lineageTag: 729b5b55-9ade-4140-8b82-c984dd7744d5
+		lineageTag: 613c735b-af39-43d2-afa4-dcfb03a55dac
 		summarizeBy: none
 		sourceColumn: Hora
 
@@ -27,7 +27,7 @@ table Facturas
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: b63bfa71-ae9d-4ac9-bbc7-f9887fac32e6
+		lineageTag: d0c5bb7d-ba86-4026-bcc4-eb76acd06c90
 		summarizeBy: none
 		sourceColumn: SucursalID
 
@@ -35,7 +35,7 @@ table Facturas
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 03359651-cf9a-479f-b735-48d5ebf763cb
+		lineageTag: 20aedbe6-e7d9-4deb-9a5b-5c153f81f440
 		summarizeBy: none
 		sourceColumn: VendedorID
 
@@ -43,13 +43,13 @@ table Facturas
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: f3e4b3dc-b70f-49c7-a14f-346c48a86f67
+		lineageTag: f378ae42-6bbc-444d-b498-197f4cbb92ef
 		summarizeBy: none
 		sourceColumn: ClienteID
 
 	column MetodoPago
 		dataType: string
-		lineageTag: 15526370-5afc-4383-b08c-4592163eb939
+		lineageTag: dd0602c3-22bd-4eea-8adb-f5c7e820ba9a
 		summarizeBy: none
 		sourceColumn: MetodoPago
 
@@ -57,14 +57,14 @@ table Facturas
 		dataType: int64
 		isHidden
 		formatString: \$#,0
-		lineageTag: 035eedc0-858d-4da0-996e-cb085e85fd5c
+		lineageTag: 51bc2155-220b-45b2-88fa-e5a7a311a41f
 		summarizeBy: sum
 		sourceColumn: Subtotal
 
 	column DescuentoPct
 		dataType: double
 		formatString: 0%
-		lineageTag: 4086d543-8f1f-44ae-b415-cdbcf0bb7e6b
+		lineageTag: b660a135-1d88-44d6-ba3a-f0c658b74aa2
 		summarizeBy: none
 		sourceColumn: DescuentoPct
 
@@ -72,7 +72,7 @@ table Facturas
 		dataType: int64
 		isHidden
 		formatString: \$#,0
-		lineageTag: 7f63beb3-0cb9-4dab-b834-53b2e3f5befe
+		lineageTag: 0a838d1c-2719-422a-83a4-05c604f2ba66
 		summarizeBy: sum
 		sourceColumn: Total
 
@@ -80,7 +80,7 @@ table Facturas
 		dataType: int64
 		isHidden
 		formatString: \$#,0
-		lineageTag: 8d543b34-9e7d-426e-8b90-1b2117c8f61f
+		lineageTag: 45585897-0d6d-406e-a71a-bd8a93c03886
 		summarizeBy: sum
 		sourceColumn: MontoDescuento
 

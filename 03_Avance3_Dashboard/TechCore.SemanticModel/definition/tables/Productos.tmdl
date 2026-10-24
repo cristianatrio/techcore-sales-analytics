@@ -1,30 +1,30 @@
 table Productos
-	lineageTag: 74d56ac2-1010-49ef-b87e-efe8551d38be
+	lineageTag: 255a7ecb-eb1e-495b-9881-dc9153a4c6cb
 
 	column ProductoID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: dd57db10-c7c7-473a-a1d0-26df0e720a5b
+		lineageTag: a2986a39-b5ec-412c-a521-66d907673e69
 		summarizeBy: none
 		sourceColumn: ProductoID
 
 	column Nombre
 		dataType: string
-		lineageTag: be2899e7-cd98-4b18-a5aa-7360c2aa8c7b
+		lineageTag: 8ecd5a82-ab4f-4acb-8ef1-165881e11068
 		summarizeBy: none
 		sourceColumn: Nombre
 
 	column Marca
 		dataType: string
-		lineageTag: 8db15947-a345-42cf-b25a-a67c8c5bbc35
+		lineageTag: 43cf5f80-951a-4301-92b3-8afeb17a71e7
 		summarizeBy: none
 		sourceColumn: Marca
 
 	column Precio
 		dataType: int64
 		formatString: \$#,0
-		lineageTag: 321c6fd5-752e-44ec-a31b-0da295afe95e
+		lineageTag: f78fbb90-9789-4683-8889-1aae42132d90
 		summarizeBy: none
 		sourceColumn: Precio
 

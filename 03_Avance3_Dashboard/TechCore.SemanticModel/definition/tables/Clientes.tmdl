@@ -1,48 +1,48 @@
 table Clientes
-	lineageTag: 7a5cc144-92be-44e2-9fbd-7fe408cd5878
+	lineageTag: 94fe3483-edbf-4371-8b4d-12d9f2b50d4e
 
 	column ClienteID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: e80d06a5-7a97-4408-90dd-d6ae602cf722
+		lineageTag: 0fe5e174-6c0b-4c04-bafa-5492657eead7
 		summarizeBy: none
 		sourceColumn: ClienteID
 
 	column Nombre
 		dataType: string
-		lineageTag: 1066dd9e-6632-494c-be00-3c39efc2ef07
+		lineageTag: 989caa31-d1a7-4531-b5dd-5bfd9cc5aae9
 		summarizeBy: none
 		sourceColumn: Nombre
 
 	column Genero
 		dataType: string
-		lineageTag: 5ade5206-86bc-4195-9052-d9532da17575
+		lineageTag: 469c6dde-6da4-4ec3-967b-63208b267e6d
 		summarizeBy: none
 		sourceColumn: Genero
 
 	column Edad
 		dataType: int64
 		formatString: 0
-		lineageTag: 21851a7f-06bd-420a-81d2-cc1b5e0386d0
+		lineageTag: 7d14254f-2e23-4d65-bf42-6dfad227da32
 		summarizeBy: none
 		sourceColumn: Edad
 
 	column Email
 		dataType: string
-		lineageTag: 059e580e-3615-4a17-8f3f-6a7f27bd3a4b
+		lineageTag: 88a78738-7701-4936-9c46-f6e8a9027f5d
 		summarizeBy: none
 		sourceColumn: Email
 
 	column Telefono
 		dataType: string
-		lineageTag: 3feb6582-0c62-40b3-869f-6accfc72ba1a
+		lineageTag: ccc792f7-080c-41fa-8f62-f31291e5e844
 		summarizeBy: none
 		sourceColumn: Telefono
 
 	column Direccion
 		dataType: string
-		lineageTag: ed2cedf6-7281-49e4-b277-86642c5770b0
+		lineageTag: 3227000a-d612-4a8a-83b2-becda8d2121a
 		summarizeBy: none
 		sourceColumn: Direccion
 
