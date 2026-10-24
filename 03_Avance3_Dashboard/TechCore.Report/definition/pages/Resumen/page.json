@@ -4,5 +4,12 @@
   "displayName": "Resumen",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "slc_anio_p1",
+      "target": "v_anio",
+      "type": "NoFilter"
+    }
+  ]
 }

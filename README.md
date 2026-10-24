@@ -53,7 +53,7 @@ erDiagram
 ```
 
 * **Hechos:** `Facturas` (cabecera, descuento por factura) y `DetalleFacturas` (renglón: cantidad, precio, subtotal y subtotal neto).
-* **Dimensiones:** `Productos`, `Clientes`, `Sucursales`, `Vendedores`, `Ciudades` y `Calendario` (DAX, marcada como tabla de fechas).
+* **Dimensiones:** `Productos`, `Clientes` (con rango de edad), `Sucursales`, `Vendedores`, `Ciudades` (con latitud y longitud para el mapa) y `Calendario` (DAX, marcada como tabla de fechas).
 * **Medidas** organizadas por carpetas: ventas, volumen, participación e inteligencia de tiempo (YoY, YTD, media móvil 12 M).
 
 ## Calidad de datos (lo que se corrigió)
@@ -72,11 +72,23 @@ erDiagram
 
 ## Dashboard
 
-Tres páginas con tema oscuro propio (`techcore.json`), navegación integrada y segmentadores sincronizados:
+Tema oscuro propio (`techcore.json`), navegación con botones y tres páginas de análisis más dos de apoyo:
 
-1. **Resumen** — 6 KPIs, tendencia móvil de 12 meses, ventas por ciudad, marca, método de pago y sucursal.
-2. **Productos** — mix por marca (treemap), evolución anual apilada y tabla de producto.
-3. **Clientes y equipo** — matriz ciudad → sucursal, género, día de la semana, vendedores y estacionalidad.
+| Página | Qué muestra |
+|---|---|
+| **Resumen** | 6 KPIs (ventas netas, facturas, ticket, clientes, crecimiento anual, % descuento), ventas por año (los años parciales en ámbar), **mapa de Colombia** por ciudad, método de pago, marcas y sucursales |
+| **Productos** | Top 8 productos, **posicionamiento de marcas** (volumen vs. precio medio) y detalle por producto con barras de datos |
+| **Clientes y equipo** | Matriz ciudad → sucursal, clientes por género y por rango de edad, top 8 vendedores y estacionalidad mensual |
+| **Ficha de sucursal** *(oculta, drillthrough)* | KPIs, ventas por año y por marca, top 5 vendedores y medios de pago de una sucursal |
+| **Tooltip** *(oculta)* | Mini-resumen que aparece al pasar el mouse por el mapa y los gráficos |
+
+### Interactividad
+
+* Segmentadores de **año** y **ciudad** (o marca en Productos) y botón **Limpiar** para borrar todos los filtros.
+* **Drillthrough:** clic derecho sobre una sucursal → *Ficha de sucursal*; el botón *Volver* regresa al informe.
+* **Tooltips de página** en mapa, marcas, sucursales, método de pago y productos.
+* **Crecimiento anual** comparado de forma justa (último año contra el mismo período del año anterior, así que 2025 parcial no parece una caída) y coloreado en verde o rojo.
+* Los gráficos de ranking usan filtros **Top N** (productos, vendedores).
 
 ### Seguridad a nivel de fila (RLS)
 

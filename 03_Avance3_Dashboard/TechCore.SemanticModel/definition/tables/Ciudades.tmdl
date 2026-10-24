@@ -1,19 +1,35 @@
 table Ciudades
-	lineageTag: 5aa9f5a3-82f1-4b19-afe9-c5845e07bf56
+	lineageTag: d10e53b4-f758-4374-bbad-8cb4cbfaec91
 
 	column CiudadID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 07a1c9f2-1bf5-41c3-af00-e3939266ba3c
+		lineageTag: 3205cbb9-85fd-4898-b0c0-9c9f02aac82e
 		summarizeBy: none
 		sourceColumn: CiudadID
 
 	column NombreCiudad
 		dataType: string
-		lineageTag: 88f96547-b7b6-48f1-b7c9-cd63009c24c2
+		lineageTag: 50c4c5dc-e030-47c6-8191-e10b2c64eef5
 		summarizeBy: none
 		sourceColumn: NombreCiudad
+
+	column Latitud
+		dataType: double
+		formatString: 0.0000
+		dataCategory: Latitude
+		lineageTag: d2140ada-bbec-4293-bf56-ffcc2039cf38
+		summarizeBy: none
+		sourceColumn: Latitud
+
+	column Longitud
+		dataType: double
+		formatString: 0.0000
+		dataCategory: Longitude
+		lineageTag: 6b9ff4bd-551f-47c9-9d90-04814bba12c9
+		summarizeBy: none
+		sourceColumn: Longitud
 
 	partition Ciudades = m
 		mode: import
@@ -22,7 +38,7 @@ table Ciudades
 				    Origen = Excel.Workbook(File.Contents(RutaDatos & "modeloVentas.xlsx"), null, true),
 				    Hoja = Origen{[Item="Ciudades",Kind="Sheet"]}[Data],
 				    Encabezados = Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]),
-				    Tipos = Table.TransformColumnTypes(Encabezados, {{"CiudadID", Int64.Type}, {"NombreCiudad", type text}})
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"CiudadID", Int64.Type}, {"NombreCiudad", type text}, {"Latitud", type number}, {"Longitud", type number}})
 				in
 				    Tipos
 

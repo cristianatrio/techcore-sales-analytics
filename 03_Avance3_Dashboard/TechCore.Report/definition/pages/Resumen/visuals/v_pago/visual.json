@@ -136,10 +136,10 @@
                 }
               }
             },
-            "maxMarginFactor": {
+            "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "50L"
+                  "Value": "18L"
                 }
               }
             }
@@ -194,14 +194,41 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ReportPage'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'e2e03ef89692b46a'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   },
   "position": {
-    "x": 936,
-    "y": 216,
-    "width": 320,
-    "height": 224,
+    "x": 886,
+    "y": 212,
+    "width": 370,
+    "height": 216,
     "z": 0,
     "tabOrder": 0
   },

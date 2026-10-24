@@ -6,7 +6,7 @@
     "y": 14,
     "z": 0,
     "height": 96,
-    "width": 404,
+    "width": 360,
     "tabOrder": 0
   },
   "visual": {
@@ -35,7 +35,7 @@
                     "value": "Clientes y equipo · sucursales y vendedores",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "11pt",
+                      "fontSize": "10pt",
                       "color": "#8FA0C0"
                     }
                   }

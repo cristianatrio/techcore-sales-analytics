@@ -1,7 +1,7 @@
 {
   "name": "v_marca",
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -61,10 +61,17 @@
       }
     },
     "objects": {
-      "labels": [
+      "valueAxis": [
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -78,24 +85,6 @@
                 }
               }
             },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E8EEF9'"
-                    }
-                  }
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -106,7 +95,7 @@
           }
         }
       ],
-      "valueAxis": [
+      "legend": [
         {
           "properties": {
             "show": {
@@ -115,8 +104,14 @@
                   "Value": "false"
                 }
               }
-            },
-            "gridlineShow": {
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -132,27 +127,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "50L"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "8D"
                 }
               }
             }
@@ -194,14 +169,41 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ReportPage'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'e2e03ef89692b46a'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   },
   "position": {
     "x": 24,
-    "y": 452,
+    "y": 440,
     "width": 620,
-    "height": 244,
+    "height": 256,
     "z": 0,
     "tabOrder": 0
   },

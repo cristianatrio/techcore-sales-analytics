@@ -1,50 +1,63 @@
 table Clientes
-	lineageTag: 94fe3483-edbf-4371-8b4d-12d9f2b50d4e
+	lineageTag: 8e7a923f-3775-40ed-9f0a-82720535a917
 
 	column ClienteID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 0fe5e174-6c0b-4c04-bafa-5492657eead7
+		lineageTag: bd20296b-d572-4e5c-a97f-b496bf130f36
 		summarizeBy: none
 		sourceColumn: ClienteID
 
 	column Nombre
 		dataType: string
-		lineageTag: 989caa31-d1a7-4531-b5dd-5bfd9cc5aae9
+		lineageTag: 1748d84a-27ea-4d55-9e0f-a7aa7df84a9b
 		summarizeBy: none
 		sourceColumn: Nombre
 
 	column Genero
 		dataType: string
-		lineageTag: 469c6dde-6da4-4ec3-967b-63208b267e6d
+		lineageTag: 938698a6-f420-4c69-beda-d40240e0cc09
 		summarizeBy: none
 		sourceColumn: Genero
 
 	column Edad
 		dataType: int64
 		formatString: 0
-		lineageTag: 7d14254f-2e23-4d65-bf42-6dfad227da32
+		lineageTag: 8dba754a-5bed-4b67-a917-f78750454bb7
 		summarizeBy: none
 		sourceColumn: Edad
 
 	column Email
 		dataType: string
-		lineageTag: 88a78738-7701-4936-9c46-f6e8a9027f5d
+		lineageTag: 551ea194-00ed-49e0-a9a1-7b6242899b63
 		summarizeBy: none
 		sourceColumn: Email
 
 	column Telefono
 		dataType: string
-		lineageTag: ccc792f7-080c-41fa-8f62-f31291e5e844
+		lineageTag: 7498e3aa-b0ab-444c-ba70-aae9562c1eb6
 		summarizeBy: none
 		sourceColumn: Telefono
 
 	column Direccion
 		dataType: string
-		lineageTag: 3227000a-d612-4a8a-83b2-becda8d2121a
+		lineageTag: d850ed81-46a3-4bd5-9137-595263b36026
 		summarizeBy: none
 		sourceColumn: Direccion
+
+	column 'Rango de edad' = SWITCH(TRUE(), [Edad] < 25, "18-24", [Edad] < 35, "25-34", [Edad] < 45, "35-44", [Edad] < 55, "45-54", "55+")
+		dataType: string
+		lineageTag: df260f48-e7c5-4b98-b916-9439de9fa513
+		summarizeBy: none
+		sortByColumn: 'Orden rango de edad'
+
+	column 'Orden rango de edad' = SWITCH(TRUE(), [Edad] < 25, 1, [Edad] < 35, 2, [Edad] < 45, 3, [Edad] < 55, 4, 5)
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5842f701-09f4-466f-86d4-e6083c0cc865
+		summarizeBy: none
 
 	partition Clientes = m
 		mode: import

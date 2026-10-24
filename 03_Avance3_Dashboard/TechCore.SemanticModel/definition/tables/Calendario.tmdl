@@ -1,19 +1,19 @@
 table Calendario
 	dataCategory: Time
-	lineageTag: a9f751ab-dd5e-49b7-88cf-36aa8d092707
+	lineageTag: 730921bd-5e52-47cc-9ae9-b71dc830fdd0
 
 	column Fecha
 		dataType: dateTime
 		isKey
 		formatString: dd/mm/yyyy
-		lineageTag: 4ab70fa2-0aa1-4af4-bfd2-678da3c27e3d
+		lineageTag: ba421908-50fd-47f3-965c-90fc5116c072
 		summarizeBy: none
 		sourceColumn: [Date]
 
 	column Año
 		dataType: int64
 		formatString: 0
-		lineageTag: 79ab6c0d-0955-45fc-b920-784ba5b1cc8b
+		lineageTag: 64414f52-9f5b-4b81-917a-38156348eb45
 		summarizeBy: none
 		sourceColumn: [Año]
 
@@ -21,26 +21,26 @@ table Calendario
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 2cda1d65-3775-4d2a-bcbe-fd11b6de61cf
+		lineageTag: 7735ba98-5561-48ce-b579-45a18569cbd1
 		summarizeBy: none
 		sourceColumn: [NroMes]
 
 	column Mes
 		dataType: string
-		lineageTag: c4143f76-df14-41a4-933e-b3d13fcd0547
+		lineageTag: f7cb419a-faf2-4d31-9258-b333bf840b31
 		summarizeBy: none
 		sourceColumn: [Mes]
 		sortByColumn: NroMes
 
 	column Trimestre
 		dataType: string
-		lineageTag: 5ed4e38b-0df7-4d2e-bafc-16b8839e4ff7
+		lineageTag: c0c8a4ca-1d23-454b-ae55-7a16415e564b
 		summarizeBy: none
 		sourceColumn: [Trimestre]
 
 	column AñoMes
 		dataType: string
-		lineageTag: 58993056-69b6-42aa-9539-9ea796c72ed6
+		lineageTag: e7af3ae5-cc90-4dea-b8e0-b6f78d7a462c
 		summarizeBy: none
 		sourceColumn: [AñoMes]
 
@@ -48,20 +48,20 @@ table Calendario
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 7a51e5ed-8595-4448-87f5-1c17ff2cb649
+		lineageTag: db8b71bf-28c4-4781-8d3f-a84c41867a1c
 		summarizeBy: none
 		sourceColumn: [NroDiaSemana]
 
 	column DiaSemana
 		dataType: string
-		lineageTag: 2c1364fc-ad1f-42b1-9092-e1a0960e38d8
+		lineageTag: ae7a24c7-af81-47b7-8958-c2c298ccc2a5
 		summarizeBy: none
 		sourceColumn: [DiaSemana]
 		sortByColumn: NroDiaSemana
 
 	column Cobertura
 		dataType: string
-		lineageTag: 738df85e-949d-4879-9cc1-fbf24b131ae3
+		lineageTag: a7017f1e-1003-4cfb-af55-d77f6e014af3
 		summarizeBy: none
 		sourceColumn: [Cobertura]
 

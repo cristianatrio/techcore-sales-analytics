@@ -1,67 +1,67 @@
 /// Medidas DAX del modelo TechCore
 table _Medidas
-	lineageTag: f6ff6c49-7ede-4b5c-a653-d16ee99033dc
+	lineageTag: 463db3a2-e7ef-4f0a-a9b0-9c9868d1448e
 
 	/// Ventas netas (después de descuentos). Cuadra con Facturas[Total].
 	measure VentasTotales = SUM(DetalleFacturas[SubtotalNeto])
 		formatString: \$#,0
 		displayFolder: 1. Ventas
-		lineageTag: db2b7b8e-9eb7-461a-82ce-ff5bd477f0fc
+		lineageTag: 2f68f3d2-6c7e-48ae-9320-c727376ac3a0
 
 	measure VentasBrutas = SUM(DetalleFacturas[Subtotal])
 		formatString: \$#,0
 		displayFolder: 1. Ventas
-		lineageTag: 4bc13b20-6d86-4075-8dd1-4a9ee416004b
+		lineageTag: 3da71671-0ef5-4d2d-ba16-ff07fc7d4162
 
 	measure Descuentos = SUM(Facturas[MontoDescuento])
 		formatString: \$#,0
 		displayFolder: 1. Ventas
-		lineageTag: 86ccd130-6f32-4f05-b545-5bb213a4c289
+		lineageTag: a528d868-75e9-44d0-8a8b-3162578969d6
 
 	measure '%Descuento' = DIVIDE([Descuentos], [VentasBrutas])
 		formatString: 0.0%
 		displayFolder: 1. Ventas
-		lineageTag: f35a8f17-8e52-4729-a11c-2a2aff76eeb6
+		lineageTag: 1b9a27d7-bf42-4363-aa1f-50e56127d7bf
 
 	measure TicketPromedio = DIVIDE([VentasTotales], [NroFacturas])
 		formatString: \$#,0
 		displayFolder: 1. Ventas
-		lineageTag: bd3bfc81-4a8f-4ffd-bd8e-fdfe5d5a9d1b
+		lineageTag: e4e7f42a-c1e5-44ec-8524-4253e2c50310
 
 	measure NroFacturas = DISTINCTCOUNT(Facturas[FacturaID])
 		formatString: #,0
 		displayFolder: 2. Volumen
-		lineageTag: e2942d96-07bf-4c0e-8d86-3a6f63ec4963
+		lineageTag: 19aac739-ddfa-4ebe-a3f0-2bc5821fcb0f
 
 	measure ProductosVendidos = SUM(DetalleFacturas[Cantidad])
 		formatString: #,0
 		displayFolder: 2. Volumen
-		lineageTag: 268f8ce7-e40f-4ebd-b7a9-13019551a1fc
+		lineageTag: d6a9c2dc-471b-425e-bf17-3d38c8530241
 
 	measure Clientes = DISTINCTCOUNT(Facturas[ClienteID])
 		formatString: #,0
 		displayFolder: 2. Volumen
-		lineageTag: 535b343e-8227-4768-bbd8-a43f3babf219
+		lineageTag: dc78b3ab-d548-4f61-aa8a-9ad87452856c
 
 	measure UnidadesPorFactura = DIVIDE([ProductosVendidos], [NroFacturas])
 		formatString: 0.00
 		displayFolder: 2. Volumen
-		lineageTag: 723f98fb-93d2-4b3e-acbc-ed261cee27ce
+		lineageTag: 01a995cb-6a45-417b-a077-fa4f0b57db06
 
 	measure '%ParticipacionCiudad' = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Ciudades)))
 		formatString: 0.0%
 		displayFolder: 3. Participación
-		lineageTag: 9de15d6f-9dab-4a51-971e-7a89875feeb1
+		lineageTag: 5be49606-b9a6-4c04-a151-edd2190584a4
 
 	measure '%ParticipacionProducto' = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Productos)))
 		formatString: 0.0%
 		displayFolder: 3. Participación
-		lineageTag: 9e0dde38-e32e-4170-9429-1d5358da3739
+		lineageTag: fe377503-2bf4-4626-98c1-0967b23e47ca
 
 	measure '%ParticipacionMarca' = DIVIDE([VentasTotales], CALCULATE([VentasTotales], ALL(Productos[Marca])))
 		formatString: 0.0%
 		displayFolder: 3. Participación
-		lineageTag: d41c96c9-c279-4c82-b354-90a98186494e
+		lineageTag: 0224bf74-0214-468c-bc80-fa832bc65e89
 
 	/// Mismo período del año anterior, recortado a la última fecha con ventas (comparación justa en 2025 YTD).
 	measure VentasAnioAnterior =
@@ -74,7 +74,7 @@ table _Medidas
 				    )
 		formatString: \$#,0
 		displayFolder: 4. Inteligencia de tiempo
-		lineageTag: 57fd0d91-bf68-407e-bec2-c9f4a5fc47dd
+		lineageTag: d065c221-af10-43a4-9b7d-e7b2916bb7c0
 
 	/// Crecimiento del último año seleccionado frente al mismo período del año anterior (año parcial comparado de forma justa).
 	measure CrecimientoYoY =
@@ -85,30 +85,46 @@ table _Medidas
 				RETURN IF(NOT ISBLANK(_previo), DIVIDE(_actual - _previo, _previo))
 		formatString: +0.0%;-0.0%;0.0%
 		displayFolder: 4. Inteligencia de tiempo
-		lineageTag: a154f635-eabc-4720-8987-37c6393a6156
+		lineageTag: cd647b55-bc16-4edb-933f-9813a4cb8c9e
 
 	measure VentasYTD = TOTALYTD([VentasTotales], Calendario[Fecha])
 		formatString: \$#,0
 		displayFolder: 4. Inteligencia de tiempo
-		lineageTag: f94abd11-9246-4d45-b409-08644614842b
+		lineageTag: adbf86ba-7be9-4f64-87f6-ba8981328daf
 
 	/// Suma móvil de 12 meses: evita el sesgo de años parciales (2014 y 2025).
 	measure VentasMovil12M = CALCULATE([VentasTotales], DATESINPERIOD(Calendario[Fecha], MAX(Calendario[Fecha]), -12, MONTH))
 		formatString: \$#,0
 		displayFolder: 4. Inteligencia de tiempo
-		lineageTag: 3ba4c7e3-42f7-4df2-8335-da47409113cb
+		lineageTag: d029aae9-67ef-4876-ba18-3ee2202ea4ab
+
+	/// Precio medio neto por unidad vendida.
+	measure PrecioPromedioUnidad = DIVIDE([VentasTotales], [ProductosVendidos])
+		formatString: \$#,0
+		displayFolder: 2. Volumen
+		lineageTag: 4e9dbc6d-4f58-4f64-a9a0-2dcd4e8b7167
+
+	/// Título dinámico de la ficha de sucursal.
+	measure TituloFicha = "Ficha de " & SELECTEDVALUE(Sucursales[NombreSucursal], "sucursal")
+		displayFolder: 5. Formato
+		lineageTag: 0a9d4c2f-7df4-4c3c-b8c7-842aa5b2d6a0
+
+	/// Color del indicador de crecimiento: verde si sube, rojo si baja.
+	measure ColorCrecimiento = IF([CrecimientoYoY] < 0, "#FB7185", "#34D399")
+		displayFolder: 5. Formato
+		lineageTag: 85c0d489-f997-4003-a460-562b8ddbd53b
 
 	measure VentasMillones = DIVIDE([VentasTotales], 1000000)
 		formatString: \$#,0.0," M"
 		displayFolder: 5. Formato
-		lineageTag: f1e38c02-21d9-4703-b595-5c376a77799a
+		lineageTag: 0cb5fe54-3c0a-41ba-b604-57a28a9077d7
 
 	measure TituloPeriodo =
 				VAR _min = MIN(Calendario[Fecha])
 				VAR _max = MAX(Calendario[Fecha])
 				RETURN FORMAT(_min, "dd/mm/yyyy") & "  →  " & FORMAT(MIN(_max, MAX(Facturas[Fecha])), "dd/mm/yyyy")
 		displayFolder: 5. Formato
-		lineageTag: 948d71a0-02d1-4df2-bb4e-3cb8f8b838d3
+		lineageTag: abb8534a-7117-4092-93ca-4b4509f37e4b
 
 	partition _Medidas = m
 		mode: import

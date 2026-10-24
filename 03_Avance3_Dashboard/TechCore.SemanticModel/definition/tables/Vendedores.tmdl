@@ -1,17 +1,17 @@
 table Vendedores
-	lineageTag: f3a6197e-0d5f-4037-b74f-a347f52870f8
+	lineageTag: bf89dc44-3c57-4a9b-ab60-a8998ea64b47
 
 	column VendedorID
 		dataType: int64
 		isHidden
 		formatString: 0
-		lineageTag: 60c103c7-6b51-40ce-99ee-26b3d54f4821
+		lineageTag: ec317282-8289-4124-8e8e-d94ec4a6dbba
 		summarizeBy: none
 		sourceColumn: VendedorID
 
 	column NombreVendedor
 		dataType: string
-		lineageTag: f7639832-adbe-4620-a93d-c6457a91ab92
+		lineageTag: ecff9ade-7b42-470a-9c5d-d417114586d5
 		summarizeBy: none
 		sourceColumn: NombreVendedor
 

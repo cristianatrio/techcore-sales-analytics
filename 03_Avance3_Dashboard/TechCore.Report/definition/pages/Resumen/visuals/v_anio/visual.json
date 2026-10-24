@@ -79,6 +79,40 @@
       }
     },
     "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000000D"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "legend": [
         {
           "properties": {
@@ -106,54 +140,13 @@
           }
         }
       ],
-      "valueAxis": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "gridlineShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1000000000D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
+                  "Value": "false"
                 }
               }
             }
@@ -176,7 +169,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ventas por año (ámbar = año parcial)'"
+                  "Value": "'Ventas por año'"
                 }
               }
             }
@@ -200,9 +193,9 @@
   },
   "position": {
     "x": 24,
-    "y": 216,
-    "width": 580,
-    "height": 224,
+    "y": 212,
+    "width": 400,
+    "height": 216,
     "z": 0,
     "tabOrder": 0
   },

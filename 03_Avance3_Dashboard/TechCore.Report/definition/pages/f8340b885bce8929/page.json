@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "f8340b885bce8929",
+  "displayName": "Ficha de sucursal",
+  "width": 1280,
+  "height": 720,
+  "displayOption": "FitToPage",
+  "visibility": "HiddenInViewMode",
+  "type": "Drillthrough",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "399185cff0abfe947816",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sucursales"
+              }
+            },
+            "Property": "NombreSucursal"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "551a4dee4aa26031092d",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "790ef6e791e3daacd1d7",
+        "boundFilter": "399185cff0abfe947816",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sucursales"
+              }
+            },
+            "Property": "NombreSucursal"
+          }
+        }
+      }
+    ]
+  }
+}

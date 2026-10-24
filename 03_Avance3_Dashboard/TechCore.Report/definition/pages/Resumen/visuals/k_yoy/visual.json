@@ -65,18 +65,36 @@
                   "Value": "24D"
                 }
               }
-            },
+            }
+          }
+        },
+        {
+          "properties": {
             "color": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#E8EEF9'"
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Medidas"
+                        }
+                      },
+                      "Property": "ColorCrecimiento"
                     }
                   }
                 }
               }
             }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ]
@@ -96,7 +114,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Crecimiento último año'"
+                  "Value": "'Crecimiento anual'"
                 }
               }
             }
@@ -119,10 +137,10 @@
     }
   },
   "position": {
-    "x": 856,
+    "x": 878,
     "y": 116,
-    "width": 192,
-    "height": 88,
+    "width": 182,
+    "height": 84,
     "z": 0,
     "tabOrder": 0
   },

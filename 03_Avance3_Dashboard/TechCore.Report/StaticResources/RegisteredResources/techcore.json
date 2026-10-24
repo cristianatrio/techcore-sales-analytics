@@ -287,7 +287,7 @@
             "border": true,
             "borderColor": {
               "solid": {
-                "color": "#B3B0AD"
+                "color": "#2A3855"
               }
             }
           }
@@ -629,17 +629,17 @@
             "optimizeLabelDisplay": false,
             "color": {
               "solid": {
-                "color": "#1971c2"
+                "color": "#22D3EE"
               }
             },
             "detailColor": {
               "solid": {
-                "color": "#1971c2"
+                "color": "#22D3EE"
               }
             },
             "titleColor": {
               "solid": {
-                "color": "#1971c2"
+                "color": "#22D3EE"
               }
             },
             "labelOverflow": true,
@@ -1137,7 +1137,7 @@
         "items": [
           {
             "padding": 4,
-            "accessibilityContrastProperties": true
+            "accessibilityContrastProperties": false
           }
         ]
       }
@@ -1154,7 +1154,7 @@
             "direction": "High is good",
             "distanceFontColor": {
               "solid": {
-                "color": "#BBBBBB"
+                "color": "#8FA0C0"
               }
             },
             "distanceFontFamily": "Segoe UI",
@@ -1312,7 +1312,7 @@
             },
             "backColorSecondary": {
               "solid": {
-                "color": "#FAFAFA"
+                "color": "#16213A"
               }
             },
             "fontColor": {
@@ -1497,7 +1497,7 @@
             },
             "backColorSecondary": {
               "solid": {
-                "color": "#F9F9F9"
+                "color": "#16213A"
               }
             },
             "fontColor": {
@@ -1527,7 +1527,7 @@
             "totals": true,
             "backColor": {
               "solid": {
-                "color": "#EBEBEB"
+                "color": "#1A2640"
               }
             },
             "fontColor": {
@@ -1539,7 +1539,7 @@
             "fontSize": 10.5,
             "outlineColor": {
               "solid": {
-                "color": "#D0D0D0"
+                "color": "#2A3855"
               }
             },
             "outlineStyle": 1,
@@ -1570,7 +1570,7 @@
             "fontSize": 10.5,
             "outlineColor": {
               "solid": {
-                "color": "#D8D8D8"
+                "color": "#2A3855"
               }
             },
             "outlineStyle": 1,
@@ -1585,13 +1585,13 @@
             "chartType": "line",
             "dataColor": {
               "solid": {
-                "color": "#1971c2"
+                "color": "#22D3EE"
               }
             },
             "strokeWidth": 2,
             "markerColor": {
               "solid": {
-                "color": "#1971c2"
+                "color": "#22D3EE"
               }
             },
             "markerShape": "circle",
